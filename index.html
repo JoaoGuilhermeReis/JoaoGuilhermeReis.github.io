@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PortfólioGuilhermeReis</title>
+  <title>Portfólio Guilherme Reis</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -20,7 +20,8 @@
     }
 
     header {
-      background-color: #111;
+      background-color: white;
+      color: black;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
@@ -29,20 +30,31 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 255, 135, 0.1);
+      transition: background-color 0.6s ease, color 0.6s ease;
     }
 
-    .logo {
+    header.scrolled {
+      background-color: #111;
+      color: #00ff87;
+      box-shadow: 0 2px 10px rgba(0, 255, 135, 0.4);
+    }
+
+    .logo h1 {
       font-size: 24px;
       font-weight: 800;
-      color: #e6fff3;
+      background: linear-gradient(90deg, #00ff87, #1ff0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     nav a {
       margin-left: 30px;
       text-decoration: none;
-      color: #ffffff;
+      color: inherit;
       font-weight: 600;
       position: relative;
+      transition: color 0.6s ease;
     }
 
     nav a::after {
@@ -87,6 +99,11 @@
       margin-bottom: 10px;
     }
 
+    ul li {
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+
     .card-link {
       display: block;
       text-decoration: none;
@@ -121,8 +138,22 @@
     }
 
     @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
       nav a {
-        margin-left: 15px;
+        display: block;
+        margin: 5px 0;
       }
 
       h2 {
@@ -136,14 +167,10 @@
   </style>
 </head>
 <body>
+
 <header> 
-  <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-    <a href="index.html">
-      <img src="logo.png" alt="Logo Guilherme Reis" style="height: 50px;">
-    </a>
-    <h1 style="font-size: 20px; margin: 0; color: #00ff87; font-weight: 600;">
-      Guilherme Reis
-    </h1>
+  <div class="logo">
+    <h1>Guilherme Reis</h1>
   </div>
   <nav>
     <a href="#quem-sou-eu">Quem sou eu</a>
@@ -151,74 +178,74 @@
     <a href="#contato">Contatos</a>
   </nav>
 </header>
-  <main class="container">
-    <section id="quem-sou-eu">
-      <h2>Quem sou eu</h2>
-      <p>Bom, aqui vai uma breve descrição da minha jornada profissional.
-        Atualmente, estou estudando programação e hacking, com o objetivo de me tornar um hacker ético.
-        Tenho interesse em aprender mais sobre segurança cibernética e como proteger sistemas contra ameaças.
-        Em dezembro de 2025, irei me formar em Análise e Desenvolvimento de Sistemas, o que será uma grande realização.
-       
-    
-    </section>
 
-    <h3>Cursos e Certificações</h3>
-<ul>
-  <li> Análise e Desenvolvimento de Sistemas (Faculdade em andamento)</li>
-  <li> Técnico em Redes e Infraestrutura</li>
-  <li> Hacker Ético</li>
-  <li> Segurança da Informação – Cisco Networking</li>
-  <li> Sistemas em Nuvem – Certificação 2025</li>
-  <li> Qualidade de Software – 2025</li>
-  <li> Administração de Redes e Servidores – Cisco (2025)</li>
-  <li> Network Defense – Cisco (2025)</li>
-</ul>
+<main class="container">
+  <section id="quem-sou-eu">
+    <h2>Quem sou eu</h2>
+    <p>Bom, aqui vai uma breve descrição da minha jornada profissional.
+      Atualmente, estou estudando programação e hacking, com o objetivo de me tornar um hacker ético.
+      Tenho interesse em aprender mais sobre segurança cibernética e como proteger sistemas contra ameaças.
+      Em dezembro de 2025, irei me formar em Análise e Desenvolvimento de Sistemas, o que será uma grande realização.
+    </p>
+  </section>
 
-    <section id="projetos">
-      <h2>Projetos</h2>
+  <h3>Cursos e Certificações</h3>
+  <ul>
+    <li>Análise e Desenvolvimento de Sistemas (Faculdade em andamento)</li>
+    <li>Técnico em Redes e Infraestrutura</li>
+    <li>Hacker Ético</li>
+    <li>Segurança da Informação – Cisco Networking</li>
+    <li>Sistemas em Nuvem – Certificação 2025</li>
+    <li>Qualidade de Software – 2025</li>
+    <li>Administração de Redes e Servidores – Cisco (2025)</li>
+    <li>Network Defense – Cisco (2025)</li>
+  </ul>
 
-      <a href="bots-telegram.html" class="card-link">
-        <div class="card">
-          <h3>Bots para Telegram</h3>
-          <p>Criação de bots para sorteios, gerenciamento de grupos e apostas esportivas com odds.</p>
-        </div>
-      </a>
+  <section id="projetos">
+    <h2>Projetos</h2>
 
-      <a href="ferramentas.html" class="card-link">
-        <div class="card">
-          <h3>Ferramentas utilizadas</h3>
-          <p>Visual Studio Code, GitHub e OpenIA.</p>
-        </div>
-      </a>
-
-      <a href="hacker-tools.html" class="card-link">
-        <div class="card">
-          <h3>Ferramentas de hacking ético</h3>
-          <p>Exploração de ferramentas como Hydra e Seeker para aprendizado técnico e ético.</p>
-        </div>
-      </a>
-    </section>
-
-   <section id="contato">
-  <h2>Contatos</h2>
-
-  <p>
-    Email: 
-    <a href="mailto:guilhermegfj05@gmail.com" style="color: #00ff87; text-decoration: underline;" id="email-link">
-      guilhermegfj003@gmail.com
+    <a href="bots-telegram.html" class="card-link">
+      <div class="card">
+        <h3>Bots para Telegram</h3>
+        <p>Criação de bots para sorteios, gerenciamento de grupos e apostas esportivas com odds.</p>
+      </div>
     </a>
-    <button onclick="copiarEmail()" style="margin-left: 10px; padding: 4px 8px; font-size: 14px; cursor: pointer; background-color: #ffffff; color: #000; border: none; border-radius: 4px;">
-      Copiar
-    </button>
-    <span id="mensagem-copiado" style="margin-left: 10px; color: #00ff87; display: none;">Copiado!</span>
-  </p>
 
-  <p>
-    GitHub:
-    <a href="https://github.com/JoaoGuilhermeReis" target="_blank" style="color: #00ff87; text-decoration: underline;">
-      github.com/JoaoGuilhermeReis
+    <a href="ferramentas.html" class="card-link">
+      <div class="card">
+        <h3>Ferramentas utilizadas</h3>
+        <p>Visual Studio Code, GitHub e OpenIA.</p>
+      </div>
     </a>
-  </p>
+
+    <a href="hacker-tools.html" class="card-link">
+      <div class="card">
+        <h3>Ferramentas de hacking ético</h3>
+        <p>Exploração de ferramentas como Hydra e Seeker para aprendizado técnico e ético.</p>
+      </div>
+    </a>
+  </section>
+
+  <section id="contato">
+    <h2>Contatos</h2>
+
+    <p>
+      Email: 
+      <a href="mailto:guilhermegfj05@gmail.com" style="color: #00ff87; text-decoration: underline;" id="email-link">
+        guilhermegfj003@gmail.com
+      </a>
+      <button onclick="copiarEmail()" style="margin-left: 10px; padding: 4px 8px; font-size: 14px; cursor: pointer; background-color: #ffffff; color: #000; border: none; border-radius: 4px;">
+        Copiar
+      </button>
+      <span id="mensagem-copiado" style="margin-left: 10px; color: #00ff87; display: none;">Copiado!</span>
+    </p>
+
+    <p>
+      GitHub:
+      <a href="https://github.com/JoaoGuilhermeReis" target="_blank" style="color: #00ff87; text-decoration: underline;">
+        github.com/JoaoGuilhermeReis
+      </a>
+    </p>
 
   <h3 style="margin-top: 40px;">Envie uma mensagem</h3>
   <form action="https://formsubmit.co/guilhermegfj003@gmail.com" method="POST" style="max-width: 500px;">
@@ -241,13 +268,13 @@
       }, 2000);
     });
   }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelector('header').classList.add('scrolled');
+    }, 3000);
+  });
 </script>
-
-  </main>
-
-  <footer>
-  <p>© 2025 João Guilherme Reis • Todos os direitos reservados.</p>
-</footer>
 
 </body>
 </html>
