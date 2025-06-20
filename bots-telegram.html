@@ -5,17 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bots para Telegram - Guilherme</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <style>
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #0d0d0d;
       color: #ffffff;
-      margin: 0;
-      padding: 0;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #111;
+      background-color: white;
+      color: black;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
@@ -24,20 +30,30 @@
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 10px rgba(0, 255, 135, 0.1);
+      transition: background-color 0.6s ease, color 0.6s ease;
     }
 
-    .logo {
+    header.scrolled {
+      background-color: #111;
+      color: #00ff87;
+      box-shadow: 0 2px 10px rgba(0, 255, 135, 0.4);
+    }
+
+    .logo h1 {
       font-size: 24px;
       font-weight: 800;
-      color: #e6fff3;
+      background: linear-gradient(90deg, #00ff87, #1ff0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     nav a {
       margin-left: 30px;
       text-decoration: none;
-      color: #ffffff;
+      color: inherit;
       font-weight: 600;
       position: relative;
+      transition: color 0.6s ease;
     }
 
     nav a::after {
@@ -61,10 +77,36 @@
       padding: 60px 20px;
     }
 
-    h1 {
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
       font-size: 32px;
       color: #00ff87;
       margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    ul li {
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+
+    .card-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
     }
 
     .card {
@@ -73,39 +115,12 @@
       border-radius: 10px;
       margin-top: 20px;
       box-shadow: 0 0 10px rgba(0, 255, 135, 0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: scale(1.02);
-    }
-
-    .card h2 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #ccc;
-    }
-
-    .btns {
-      margin-top: 15px;
-    }
-
-    .btns a {
-      text-decoration: none;
-      background-color: #00ff87;
-      color: #000;
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-right: 10px;
-      transition: background-color 0.2s ease;
-    }
-
-    .btns a:hover {
-      background-color: #00cc6a;
+      box-shadow: 0 0 15px rgba(0, 255, 135, 0.3);
     }
 
     footer {
@@ -114,7 +129,39 @@
       font-size: 16px;
       color: #aaa;
       border-top: 1px solid #333;
-      margin-top: 60px;
+    }
+
+    footer a {
+      color: #00ff87;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      nav {
+        width: 100%;
+      }
+
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
